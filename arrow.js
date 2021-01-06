@@ -71,11 +71,18 @@ const invoices = [
 //.reduce ((total, invoice) => total + invoices.amount, 0 )
 
 
-const person = { 
-    name: "Bilbo"
-    sayHi: function (){
-        console.log(this.name, 'says hi')
-    }
-}
-person.sayHi
+//const person = { 
+   // name: "Bilbo"
+   // sayHi: function (){
+    //    console.log(this.name, 'says hi')
+   // }
+//}
+//person.sayHi
 
+
+
+let tvShow = "catdog";
+
+tvShow.indexOf('cat');
+tvShow.indexOf('dog');
+tvShow.indexOf('a');

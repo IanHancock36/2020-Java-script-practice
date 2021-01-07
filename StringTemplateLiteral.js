@@ -21,3 +21,10 @@ let quantity = 4;
 `You bought ${quantity} ${item}, total price: $${price * quantity}`;
 
 //"You bought 4 cucumbers, total price: $7.96"
+
+const minAge = 21;
+
+let yourAge = 19; 
+
+`You must be ${minAge} to enter. Come back in ${minAge - yourAge} years`
+

@@ -17,3 +17,5 @@ loggedInUser = "steve";
 
 //Undefined 
 let color; 
+
+

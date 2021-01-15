@@ -41,3 +41,28 @@ dishesToDo.unshift('knife','plant','cofee mug')
 dishesToDo.shift() // removes the last in the array. 
 
 
+//concat combining 2 arrays. doesnt change original arrays but it makes
+//a copy of them. 
+
+// the order of the concat matters to apply to a new array. 
+
+
+
+let fruits = ['apple', 'bannana'];
+let veggies = ['cucumber', 'tomato'];
+let treats = ['ice cream','soda',]
+
+
+let allFood = fruits.concat(veggies,treats)
+
+
+// slice method ************ 
+
+
+let animals = ['shark','bear','lizard','cat']
+
+
+let swimmers = animals.slice(3)
+let swimmers = animals.slice(-3)
+
+

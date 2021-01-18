@@ -66,3 +66,10 @@ let swimmers = animals.slice(3)
 let swimmers = animals.slice(-3)
 
 
+/// splice.....******** 
+// it takes a start index how many things you want to delete and what you want to insert. 
+
+
+let animals = ['shark','bear','lizard','cat'] 
+
+animals.splice(1,0,'octopus')

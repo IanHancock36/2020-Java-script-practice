@@ -100,7 +100,34 @@ sum(9,3)
 // example below.. 
 
 const product = function multiply (x,y){
-  return x * y 
+  return x * y; 
 }
 // call it this way.. 
 profict (3,5)
+
+////**** functions are objects *****\\\\
+// 4 functions stored in an array below 
+const product = function multiply (x,y){
+  return x * y; 
+}
+
+function add (x,y){
+  return x + y; 
+}
+
+const subtract = function ( x,y) {
+  return x-y;
+}
+ const divide = function (x,y){
+   return x / y;
+ }
+
+ const operations = [add, subtract, multiply, divide]
+
+ // can call this way.. make a method out of function... 
+
+ const thing = {
+   doSomething : multiply
+ }
+thing.doSomething(2,3) // with = 6 
+// this calls the multiply function that was created above 

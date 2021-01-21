@@ -131,3 +131,56 @@ const subtract = function ( x,y) {
  }
 thing.doSomething(2,3) // with = 6 
 // this calls the multiply function that was created above 
+
+
+// Higher order Function !  ! ! ! \\***** 
+
+// **** Functions that operate on/with othr functions. 
+// they can #1 Accept other functions as arguments 
+// #2 Return a function 
+
+function callTwice(func){ //func is the argument name. but you can call it whatever you want
+  func();
+  func()
+}
+
+function laugh(){
+  console.log("HHAHHHAHAHAHAHA")
+}
+
+callTwice(laugh) // pass a function in as an argument! Freaking Sweet! 
+// this will return : 
+// "HHAHHHAHAHAHAHA"
+//"HHAHHHAHAHAHAHA"
+
+// below just looping a number that is called as 
+// and argument and each time calling the "action" argument
+function repeatNTimes(action,num){
+  for (let i = 0; i < num; i++){
+    action()
+  }
+}
+//now you can use the function "laugh"with the repeatNTimes function.
+// here is is below. see passing the argument which is the laugh
+// function and then calling the num argument is set to 13 times.
+
+repeatNTimes(laugh, 13 )
+// this will put: "HHAHHHAHAHAHAHA" 13 times on the screen.
+// or whatever you put as arguments inside the repeateNTimes function
+
+
+function pickOne(f1,f2){
+  let rand = Math.floor();
+  console.log(rand);
+  if (rand < 0.5 ){
+    f1()
+  }
+  else{
+    f2()
+  }
+}
+//now you could put in any function names that you want to pass
+// through this pick one function.. and It will randomly pick a number
+// and if its less than 0.5 "<0.5" it will run function f1 using
+// an if else statememt..
+// else it runs function f2 or function 2 

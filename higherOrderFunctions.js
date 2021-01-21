@@ -40,3 +40,67 @@ function birdWatch() {
 }
 //**** above you can have the same variable called 
 //due to the scope of the function...
+
+
+////// ************ Block Scope **********\\\\\
+
+function doubleArr(arr) {
+  const result =[];
+  for (let num of arr){
+    let double = num * 2
+    result.push(double)
+  }
+}
+
+//***** Lexical Scope *******\\
+//example 
+
+function TodoList(){
+  let todos = [];
+  let username = '';
+  function addTodo(){
+
+  }
+  function removeTodo(){
+
+  }
+  function upDateTodo(){
+
+  }
+}
+/// above you can access the variables 
+
+
+// ***** functional expressions ***** \\
+
+// example **** 
+const square = function (num){
+  return num * num
+}
+square(7) 
+
+// the function is stored inside a variable.
+// It doesnt have to have a name when stored
+// when stored inside a variable.... 
+// functions are objects in javascript.. WOWOW
+
+function add (x,y){
+  return x+y 
+} 
+// instead... 
+
+const sum = function (x,y){
+  return x+y 
+}
+sum(9,3)
+// this returns 12  ( 9+3 )
+
+// you can pass in a name for the function when 
+// it is stored inside a variable... 
+// example below.. 
+
+const product = function multiply (x,y){
+  return x * y 
+}
+// call it this way.. 
+profict (3,5)

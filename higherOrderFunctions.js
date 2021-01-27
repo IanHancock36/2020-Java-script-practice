@@ -184,3 +184,55 @@ function pickOne(f1,f2){
 // and if its less than 0.5 "<0.5" it will run function f1 using
 // an if else statememt..
 // else it runs function f2 or function 2 
+
+
+function add (x,y) {
+  return x+y;
+}
+function subtract (x,y) {
+  return x-y;
+}
+
+function multiply(x,y){
+  return x*y ; 
+  }
+
+  function divide(x,y){
+    return x/y ; 
+    }
+
+
+    const operations = [add,subtract,multiply,divide]  // this is an array with the 4 functions
+
+    // you can call / run it lijke this. 
+    operations[1] //this will call the subtract function. 
+    operations[1](100,4) // this will run the subtract funtion that will substract
+    // 100 - 4 = 96 
+    // more effiencent to call it this way. 
+    add(100,100) // which would = 200 All you are doing is looping through the array of functions. 
+
+    // like this... this will loop through all the functions and use those two parameters
+    // inside every function. 
+    for(let func of operations){
+     let result = func(30,5)
+    }
+
+    // the answer you will get is. 
+    //35   30+5 
+    //25   30-5
+   //150   30 * 5
+   //6     30 / 5 
+    
+
+
+   // another example of function stored in object. the "multiply" is from the function above
+   const thing = {
+     doSomething: multiply
+   }
+
+   // Now you call it this way. you are calling "thing" then inside of thing calling the object doSomething which
+   // that object has a function called multiply you use parens to carry out function 5*10 = 50
+   thing.doSomething(5,10)
+
+   // this is called a method. above thing.doSomething(5,10) by adding a function to an object.. 
+   // that is creating an method. 

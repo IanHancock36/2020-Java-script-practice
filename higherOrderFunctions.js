@@ -236,3 +236,38 @@ function multiply(x,y){
 
    // this is called a method. above thing.doSomething(5,10) by adding a function to an object.. 
    // that is creating an method. 
+
+
+//***************************** Functions As Arguments *****************************************\\
+// Functions that operate on/ with other functions. They can: #1 Accept other functions as arguments
+// #2 return a function. 
+
+function callThreeTimes(f){
+  f();
+  f();
+  f(); 
+
+}
+function cry(){
+  console.log('boo hoo I am so sad')
+}
+
+function rage(){
+  console.log('I hate this!'); 
+}
+
+// you can call it like this.  
+callThreeTimes(rage); 
+
+// and it will say: 'I hate this!' 'I hate this!' 'I hate this!'
+// I called the parameter name for the function "action" because you can literallt call it whatever you want
+function repeatNTimes(action, num){
+  for (let i = 0; i < num; i ++ ){
+    action();
+  }
+}
+repeatNTimes(rage,13) 
+// above you are calling the function repeatNTimes using rage which is a previous function
+// as the action parameter. and 13 as the num for the parameter. so whatever the 
+// the rage function will be called 13 times. the for loop will increase and will 
+// write 'I hate this' 13 times  

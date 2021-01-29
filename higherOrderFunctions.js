@@ -271,3 +271,19 @@ repeatNTimes(rage,13)
 // as the action parameter. and 13 as the num for the parameter. so whatever the 
 // the rage function will be called 13 times. the for loop will increase and will 
 // write 'I hate this' 13 times  
+
+function makeBetweenFunc(x,y){
+  return function(num){
+    return num >= x && num <= y;
+  }
+}
+makeBetweenFunc(0,18);
+
+const isChild = makeBetweenFunc(0,18)
+
+const isInNineties = makeBetweenFunc(1990,2000);
+
+const isItNiceOutSide = makeBetweenFunc(58,78)
+console.log(isItNiceOutSide(48))
+
+// returning functions with functions. 

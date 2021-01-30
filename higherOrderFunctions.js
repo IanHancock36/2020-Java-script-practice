@@ -287,3 +287,35 @@ const isItNiceOutSide = makeBetweenFunc(58,78)
 console.log(isItNiceOutSide(48))
 
 // returning functions with functions. 
+
+person = {
+  firstName: "Ian",
+  lastName: "Hancock",
+  // this is old way of writing function in object 
+  //fullName: function(){} you can actually write it this way
+   get fullName(){
+    return `${person.firstName} ${person.lastName}`
+  },
+  set fullName(value){
+    const nameParts = value.split(' ');
+    this.firstName = nameParts[0];
+    this.lastName = nameParts[1]
+  }
+}
+person.fullName = 'Ian Hancock';
+
+console.log(person);
+// this is a way to call the persons full or last name out of an object since
+// you have the function inside the object.
+
+// but this is not that efficent you must use. 
+
+// getters => access properties 
+//setters => change or (mutate) them.
+
+// in line 6 you add "get" to the function "fullName()"
+
+// this will run the funtion 
+
+
+

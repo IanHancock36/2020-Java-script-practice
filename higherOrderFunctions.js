@@ -302,7 +302,7 @@ person = {
     this.lastName = nameParts[1]
   }
 }
-person.fullName = 'Ian Hancock';
+person.fullName = 'Stevie HOWARD';
 
 console.log(person);
 // this is a way to call the persons full or last name out of an object since

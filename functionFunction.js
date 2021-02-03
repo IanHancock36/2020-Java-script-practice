@@ -150,3 +150,50 @@ const squared2 = arr.map(squareIt)
 
 squared2 = [1,4,9,16]
 
+// Closure functions 
+// Below this variable 'myName' is external to this function but it is available to this function
+// 'myName' is a global variable that is available in this function 
+// 'myName' has a scope the function 'printName' has a outer scope of the file which gives it access to the outerfile
+const myName = 'Ian'
+
+function printName(){
+    console.log(myName)
+}
+
+printName()
+
+// You can change it like this... 
+// change the variable from const to let. 
+let myName = 'Ian'
+
+function printName(){
+    console.log(myName)
+}
+myName = 'Stevie'
+printName()
+// this will return 'Stevie' even though the orginally it was let myName = 'Ian'
+// #1 because myName was set up as let myName 
+//# 2 because the function has the outerscope and ability to pull from that variable. 
+
+// CLOSURES ARE USUALLY FUNCTIONS INSIDE OTHER FUNCTIONS BEST EXAMPLE BELOW \\
+
+function outerFunction(outerVariable){
+    return function innerFunction(innerVariable){
+        console.log('Outer Variable: ' + outerVariable)
+        console.log('Inner Variable: ' + innerVariable)
+    }
+}
+
+const newFunction = outerFunction('outside')
+newFunction('inside')
+
+
+//$$$$$$$$$$$$$$$$ Another Example  $$$$$$$$$$$$$$$$$$$$$$$$$$$\\
+function outerFunction(outerVariable){
+    fetch(url).then(() => {
+        console.log(url)
+    })
+}
+
+const newFunction = outerFunction('outside')
+newFunction('inside')

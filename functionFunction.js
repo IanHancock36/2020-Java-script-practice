@@ -253,3 +253,69 @@ const speak = function(name , time ){
 speak('jake',"10pm")
 
 // adding Default parameters... watch 12:52 in video 
+//  $$$$***** Returning a Value *****$$$$$ ||
+// when a function returns a value you store it inside a variable
+const calcArea = function(radius){
+    let area = 3.14 * radius **2; 
+ return area; 
+}
+// you store the value the function returns inside the variable. below
+const area = calcArea(10)
+console.log(area)
+
+// Here is a clean up of the function  
+
+const calcArea = function(radius){
+    return 3.14 * radius **2; 
+  
+}
+// you clean it up and still store it in a variable below..
+const area = calcArea(10)
+console.log(area)
+
+// you can reuse this vairble inside another function
+const calcVol = function(area){
+return area + 4 
+};
+calcVol(area)
+// this returns the previous function and plugs it into the new one then returns that function 
+// in the new one. 
+// so original function returns a value in a function from another function
+
+//Arrow function \\ 
+
+// regular function example 
+const calcArea = function(radius){
+    return 3.14 * radius **2; 
+  
+}
+
+// Arrow function example \\
+const calcArea = (radius) =>{
+   return 3.14 * radius **2 
+};
+// when you only have ONE parameter and only ONE return you can shorten it like this: 
+const calcArea = radius =>  3.14 * radius **2; 
+
+// if there is more than one parameter you need the '()' like this: 
+const calcArea = (radius, something ) =>{
+    return 3.14 * radius **2 + something
+ };
+
+ // if you have more than 1 return statement you have to keep it in a return statement
+ const calcArea = (radius) =>{
+    return 3.14 * radius **2 
+ };
+
+const area = calcArea(10)
+console.log('the area is:' , area)
+
+
+const greet = function (){
+    return 'hello, world';
+
+}
+// arrow function conversion ARROW FUNCTIONS STOP AT 27 min in the net ninja Video. 
+const greet = () => 'hello, world';
+
+

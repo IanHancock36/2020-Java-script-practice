@@ -197,3 +197,59 @@ function outerFunction(outerVariable){
 
 const newFunction = outerFunction('outside')
 newFunction('inside')
+
+
+//
+
+function greet(){
+    console.log('hellop there')
+}
+greet() // this is called invoking or calling function 
+
+//function expression example :
+// this is so its const so it does not get overridden later. 
+
+// when you set a variable to something whether a string or array. its called a 'expression'
+// its called a functional expression when you set a variable to a function. // storing a function inside a variable
+const speak  = function(){
+    console.log('good day')
+}; 
+ speak(); 
+ /////
+
+ // hoisting 
+ // function declarations are hoisted to the top of the file no matter where they are placed
+// in the lines or position of the code. its a hiearchy of some sort
+// * It does not work with function expressions it will not hoist a function expression
+// 
+// $$$ A good rule of thumb is to use function expressions and call the from top down in 
+// the order that you need them. 
+
+const speak = function(name){  //'name is known as a function parmeter 
+    console.log(`good day ${name}`)
+}
+speak('jake') // speak('jake') is known as a function argument. 
+
+
+
+// '(name)' is a local variable that is used in the function expression code block
+// what I am doing is interpilating and making it so when i call speak whatever I pass for 'name' 
+// In the variable function(name) when i call speak('') with the string interpilation
+// it will plug whatever in. 
+// its assigning name as whatever name we plug it into when its called. 
+// the 'name' variable scope is only inside that function 
+
+
+// $$ ARGUMENTS AND PARAMETERS
+
+// you can take multiple parameters. 
+// the parameters must be passed in order. can't switch or it will not run the way you
+// want it to. 
+
+// example: 
+const speak = function(name , time ){  
+    console.log(`good day ${name} It is ${time}`)
+}
+speak('jake',"10pm")
+
+// adding Default parameters... watch 12:52 in video 

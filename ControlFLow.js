@@ -54,3 +54,16 @@ console.log('Hey there this password works')
 } else{
 console.log ("this password does not work. ")
 }
+
+
+//logical operators 
+// the || = OR 
+// the && = AND
+const password = 'password123455'
+if(password.length >=12 && password.includes('@')){
+console.log('that password is mighty strong')
+} else if (password.length >= 8 || password.includes('@') && password.length >5 ){
+console.log('Hey there this password works')
+} else{
+console.log ("this password does not work. ")
+}

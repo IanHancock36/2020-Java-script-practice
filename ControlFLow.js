@@ -67,3 +67,68 @@ console.log('Hey there this password works')
 } else{
 console.log ("this password does not work. ")
 }
+
+// Logical Not operator 
+
+let user = false 
+
+if (!user){
+    console.log('you must be logged in to continue')
+}
+
+//! means not.. 
+
+
+
+// break and continue 
+//using 'i' you don't have to use i you can use something else this is just a standard. 
+const scores = [50,25,0,30,100,20,10];
+
+for(let i = 0; i<scores.length; i++){
+
+    if(scores [i]===0){
+        continue;
+    }
+    console.log('your score: ', scores[i]); 
+
+if(scores[i] === 100 ){
+    console.log('congrats ')
+    break; 
+}
+}
+
+const grade = 'D';
+
+switch(grade){
+case'A':
+    console.log('you got an A!');
+    break;
+case'B':
+    console.log('you got an B!');
+    break;
+case'C':
+    console.log('you got an C!');
+    break;
+case'D':
+    console.log('you got an D!');
+    break
+case'F':
+    console.log('you got an E!');
+    break;
+    default:
+        console.log('not a valid grade')
+}
+
+
+//variables and block scope 
+let age = 30;
+
+if(true){
+    age=40
+    let name = "Ian"
+    console.log('inside 1st code block:' , age, name )
+    if(true){
+        console.log('inside 2nd code block:', age)
+    }
+}
+console.log('outside code block: ', age ,name )

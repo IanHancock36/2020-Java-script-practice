@@ -132,3 +132,72 @@ if(true){
     }
 }
 console.log('outside code block: ', age ,name )
+
+
+const speak = function(name){
+    console.log(`good day ${name}`);
+
+}
+speak('mario')
+
+// you can have default parameters inside the function but if you do not 
+// need to call them you can change it with something like interpilation. 
+// if you put default parameters in. it will use the default values unless you specify. 
+// like above. 
+
+
+// returning values... 
+
+const calcArea = funcion(radius){
+    let area = 3.14 * radius**2;
+    return area
+}
+const area = calcArea(5)
+
+
+
+
+const calcArea = function(length,width){
+    return (length * width)
+   
+
+}
+
+const area = calcArea(5,12)
+
+// when a function returns a value store the value in a variable
+// you can reuse a value you called in a function like this. 
+
+const calcVol = funtion(area){
+    // what you want to put there
+
+}
+
+//return it this way. 
+calcVol(area)
+
+
+const calcArea =(radius) => {
+
+
+    const greet = function(){
+        return'Hello world';
+
+    }
+// arrow function conversion
+
+
+console.log(results)
+
+    const bill = function (products,tax){
+        let total = 0;
+        for (let i =0; i< products.length; i++){
+            total += products[i] + products[i] * tax;
+        }
+    return total;
+    }
+console.log(bill([10,15,30], .02))
+
+
+
+const greet =()=> "hello world";

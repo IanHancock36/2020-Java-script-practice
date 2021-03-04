@@ -55,3 +55,18 @@ people.forEach(logPerson)
 4 -hello chun-li
 
 // this is a great example of a call back function! 
+
+
+const ul = document.querySelector('.people');
+
+const people = ['jim','joe','ron','shawn','dave']
+
+let html =``
+
+people.forEach(person =>{
+// create Html template for 
+html+= `<li style="color: purple>${person}</li>`
+});
+
+console.log(html)
+ul.innerHTML = html;
